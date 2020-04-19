@@ -4,7 +4,7 @@
 image: python:3.6
 
 services:
-  - docker
+  - docker:dind
 
 before_script:
   - pip install docker-compose
