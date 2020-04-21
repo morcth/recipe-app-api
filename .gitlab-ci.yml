@@ -1,9 +1,16 @@
 # This file is a template, and might need editing before it works on your project.
 # Official language image. Look for the different tagged releases at:
 # https://hub.docker.com/r/library/python/tags/
-image: python:3.6
+image: docker:latest
+
+services:
+- docker:dind
 
 before_script:
+  - docker info
+  - apk update
+  - apk upgrade
+  - apk add python
   - pip install docker-compose
 
 test:
