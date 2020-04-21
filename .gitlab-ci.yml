@@ -5,13 +5,12 @@ image: docker:latest
 
 services:
 - docker:dind
-- python:3.6
 
 before_script:
   - docker info
   - apk update
   - apk upgrade
-  - apk add py-pip
+  - apk add python python-dev py-pip build-base
   - pip install docker-compose
 
 test:
