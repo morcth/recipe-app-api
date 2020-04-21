@@ -11,6 +11,7 @@ before_script:
   - docker info
   - apk update
   - apk upgrade
+  - apk add py-pip
   - pip install docker-compose
 
 test:
